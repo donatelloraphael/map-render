@@ -119,7 +119,7 @@ const onRender = (scene) => {
 };
 
 const Render = ({ image }) => (
-  <div>
+  <div id="renderCanvas">
     <SceneComponent
       canvasId="babylon-canvas"
       antialias

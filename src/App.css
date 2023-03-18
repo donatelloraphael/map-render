@@ -6,3 +6,12 @@ header {
   display: block;
   margin: 1rem 0;
 }
+
+#renderCanvas {
+  height: 500px;
+  position: relative;
+}
+
+#babylon-canvas {
+  height: 100%;
+}
