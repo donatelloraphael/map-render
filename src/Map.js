@@ -7,7 +7,7 @@ const Map = ({ setImage }) => {
   useEffect(() => {
     // Load the Google Maps API script
     const script = document.createElement("script");
-    script.src = `https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}&callback=initMap`;
+    script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyCyGnz2X7-tCBsor4L9srv9tzAul5zDEY0&callback=initMap`;
     script.defer = true;
     script.async = true;
     document.head.appendChild(script);
