@@ -2,17 +2,15 @@ import { useRef, useEffect } from "react";
 import html2canvas from "html2canvas";
 
 const Map = ({ setImage }) => {
-  const mapRef = useRef(null);
+  const mapRef = useRef();
 
   useEffect(() => {
-    // Load the Google Maps API script
     const script = document.createElement("script");
-    script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyCyGnz2X7-tCBsor4L9srv9tzAul5zDEY0&callback=initMap`;
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}&callback=initMap`;
     script.defer = true;
     script.async = true;
     document.head.appendChild(script);
 
-    // Initialize the map
     window.initMap = () => {
       new window.google.maps.Map(document.getElementById("map"), {
         center: { lat: 37.7749, lng: -122.4194 }, // San Francisco, CA
@@ -21,7 +19,6 @@ const Map = ({ setImage }) => {
       });
     };
 
-    // Clean up the Google Maps API script
     return () => {
       document.head.removeChild(script);
     };

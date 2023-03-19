@@ -12,7 +12,7 @@ import {
 import React, { useEffect, useRef } from "react";
 
 const SceneComponent = (props) => {
-  const reactCanvas = useRef(null);
+  const reactCanvas = useRef();
 
   const {
     canvasId,
